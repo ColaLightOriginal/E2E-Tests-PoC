@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="70c054b1eac3ee7b9bea8ea3d9edb4ba83dec136fe08d019b8a7c1efd85d8b8c.html">Login Feature</a></span>
+                > <span class="truncate-60"><a
+                    href="fb3fa4e42db795cf816367e78087c64699ba5be129d0d618fffac0dc4d60567f.html">Login </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 27-08-2022 23:35</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Login Feature </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c721517496ffad35fe9a5d73f07a9bd15eb22da3cff8328e1d9f7ec70655c6b0.html">Login
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Login
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am at login page<br>When I login as "&lt;user&gt;"<br>Then I am at "&lt;page&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>StepDefinitions.PagesStepDefinition.atPage(PagesStepDefinition.java:16)<br />✽.I am at "PRODUCTS_PAGE"(file:///home/patryk/Desktop/Projects/E2E-Tests-PoC/src/test/resources/features/Login.feature:7)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" 1: Login ({user=STANDARD, page=PRODUCTS_PAGE})" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" Given I am at login page" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" Open page" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Open page (completed)" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Given I am at login page (completed)" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" When I login as &quot;STANDARD&quot;" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Login: STANDARD" width="1846"/>
+                <img src="09492d4a571c9e5862cc749b0b9d0bc9d0076dd5ca55e485e57687c002dec739.png" title=" Login: STANDARD (completed)" width="1846"/>
+                <img src="09492d4a571c9e5862cc749b0b9d0bc9d0076dd5ca55e485e57687c002dec739.png" title=" When I login as &quot;STANDARD&quot; (completed)" width="1846"/>
+                <img src="09492d4a571c9e5862cc749b0b9d0bc9d0076dd5ca55e485e57687c002dec739.png" title=" Then I am at &quot;PRODUCTS_PAGE&quot;" width="1846"/>
+                <img src="09492d4a571c9e5862cc749b0b9d0bc9d0076dd5ca55e485e57687c002dec739.png" title=" At page: PRODUCTS_PAGE" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" 2: Login ({user=PROBLEM, page=PRODUCTS_PAGE})" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" Given I am at login page" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" Open page" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Open page (completed)" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Given I am at login page (completed)" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" When I login as &quot;PROBLEM&quot;" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Login: PROBLEM" width="1846"/>
+                <img src="68cc0042f63492b9fc080965913ed1416d725cf742a32377298a9c4c699f71f7.png" title=" Login: PROBLEM (completed)" width="1846"/>
+                <img src="68cc0042f63492b9fc080965913ed1416d725cf742a32377298a9c4c699f71f7.png" title=" When I login as &quot;PROBLEM&quot; (completed)" width="1846"/>
+                <img src="68cc0042f63492b9fc080965913ed1416d725cf742a32377298a9c4c699f71f7.png" title=" Then I am at &quot;PRODUCTS_PAGE&quot;" width="1846"/>
+                <img src="68cc0042f63492b9fc080965913ed1416d725cf742a32377298a9c4c699f71f7.png" title=" At page: PRODUCTS_PAGE" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" 3: Login ({user=LOCKED, page=PRODUCTS_PAGE})" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" Given I am at login page" width="1846"/>
+                <img src="a5770c68464701fae2b1add717346954885b2ba6eff681b5f60f8eb04369727c.png" title=" Open page" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Open page (completed)" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Given I am at login page (completed)" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" When I login as &quot;LOCKED&quot;" width="1846"/>
+                <img src="0b42323305b96617196c902862eeec6a997f1e799e8e632a24aa94dd8397b4f7.png" title=" Login: LOCKED" width="1846"/>
+                <img src="36648ed1f77c144053d6d7d199b23f7061fa7ab5999c78e5d13256d668678718.png" title=" Login: LOCKED (completed)" width="1846"/>
+                <img src="36648ed1f77c144053d6d7d199b23f7061fa7ab5999c78e5d13256d668678718.png" title=" When I login as &quot;LOCKED&quot; (completed)" width="1846"/>
+                <img src="36648ed1f77c144053d6d7d199b23f7061fa7ab5999c78e5d13256d668678718.png" title=" Then I am at &quot;PRODUCTS_PAGE&quot;" width="1846"/>
+                <img src="36648ed1f77c144053d6d7d199b23f7061fa7ab5999c78e5d13256d668678718.png" title=" At page: PRODUCTS_PAGE: <span class='failing-color'>FAILURE</span>" width="1846"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.5</span>
+</div>
+</body>
+</html>
