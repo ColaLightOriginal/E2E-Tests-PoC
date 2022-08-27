@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Login feature" skipped="0" tests="3" time="21.97" timestamp="2022-08-28 12:32:04"><testcase name="Login"><failure type="java.lang.AssertionError"/><system-err>null
-StepDefinitions.PagesStepDefinition.atPage(PagesStepDefinition.java:16)
-✽.I am at "PRODUCTS_PAGE"(file:///home/patryk/Desktop/Projects/E2E-Tests-PoC/src/test/resources/features/Login.feature:7)
-</system-err></testcase></testsuite>

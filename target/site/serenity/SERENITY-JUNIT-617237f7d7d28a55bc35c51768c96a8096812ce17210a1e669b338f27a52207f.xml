@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Sale Process" skipped="0" tests="2" time="12.15" timestamp="2022-08-28 12:32:26"><testcase name=""><failure message="expected:&lt;[test]&gt; but was:&lt;[y]&gt;" type="java.lang.AssertionError">expected:&lt;[test]&gt; but was:&lt;[y]&gt;</failure><system-err>expected:&lt;[test]&gt; but was:&lt;[y]&gt;
-StepDefinitions.SaleProcessStepDefinition.checkDataInInformationForm(SaleProcessStepDefinition.java:72)
-✽.I check data in information form "test", "testowy" and "04-400"(file:///home/patryk/Desktop/Projects/E2E-Tests-PoC/src/test/resources/features/SaleProcess.feature:17)
-</system-err></testcase></testsuite>
