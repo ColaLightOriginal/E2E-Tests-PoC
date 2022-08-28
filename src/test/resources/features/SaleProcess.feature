@@ -14,7 +14,7 @@ Feature: Sale Process
 
     When I go to checkout page
     And I fill my information data with "<first_name>", "<last_name>" and "<postal_code>"
-    Then I check data in information form "<first_name>", "<last_name>" and "<postal_code>"
+    Then I check data in information form
 
     When I go to overview page
     Then I check product in overview page
@@ -25,5 +25,5 @@ Feature: Sale Process
     Examples:
       | user     | page          | product_name        | first_name | last_name | postal_code |
       | STANDARD | PRODUCTS_PAGE | Sauce Labs Backpack | test       | testowy   | 04-400      |
-      | PROBLEM | PRODUCTS_PAGE | Sauce Labs Backpack | test        | testowy   | 04-400      |
+      | PROBLEM  | PRODUCTS_PAGE | Sauce Labs Backpack  | test       | testowy   | 04-400      |
 

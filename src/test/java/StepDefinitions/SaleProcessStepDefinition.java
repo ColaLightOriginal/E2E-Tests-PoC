@@ -66,12 +66,12 @@ public class SaleProcessStepDefinition {
         this.saleProcessSteps.fillCheckoutData(informationFormRecord);
     }
 
-    @Then("I check data in information form {string}, {string} and {string}")
-    public void checkDataInInformationForm(String firstName, String lastName, String postalCode) {
+    @Then("I check data in information form")
+    public void checkDataInInformationForm() {
        InformationFormRecord informationFormFilledRecord = this.saleProcessSteps.getInformationDataFilledRecord();
-       Assert.assertEquals(firstName, informationFormFilledRecord.firstName());
-       Assert.assertEquals(lastName, informationFormFilledRecord.lastName());
-       Assert.assertEquals(postalCode, informationFormFilledRecord.postalCode());
+       Assert.assertEquals(informationFormRecord.firstName(), informationFormFilledRecord.firstName());
+       Assert.assertEquals(informationFormRecord.lastName(), informationFormFilledRecord.lastName());
+       Assert.assertEquals(informationFormRecord.postalCode(), informationFormFilledRecord.postalCode());
     }
 
     @When("I go to overview page")

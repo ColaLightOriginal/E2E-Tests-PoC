@@ -16,7 +16,6 @@ public class LoginSteps {
     @Step
     public void login(String userName){
         UserRecord user = new UserRecord(userName, null, null);
-        System.out.println(user);
         this.loginPage.login(user.username(), user.password());
     }
 }
